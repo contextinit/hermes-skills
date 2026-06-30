@@ -45,7 +45,7 @@ a{color:var(--orange);text-decoration:none}
 .hero-term{display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(18,18,42,0.7);border:1px solid rgba(255,107,53,0.15);border-radius:8px;padding:10px 18px;
   font-family:'SF Mono','Fira Code','Cascadia Code',monospace;font-size:13px;color:var(--muted);margin-bottom:40px;backdrop-filter:blur(10px)}
 .hero-term .prompt{color:var(--orange);font-weight:600}
-.hero-term .cmd{color:var(--text)}
+.hero-term .cmd{color:var(--text);word-break:break-all}.hero-term .cmd i{font-style:italic}
 .hero-term .cursor{display:inline-block;width:7px;height:15px;background:var(--pink);animation:blink 1s step-end infinite;vertical-align:middle;margin-left:2px}
 
 /* ─── CTA ─── */
@@ -83,8 +83,8 @@ h2 span{background:var(--grad1);-webkit-background-clip:text;-webkit-text-fill-c
 @media(min-width:900px){
   .why-grid{grid-template-columns:repeat(3,1fr)}
   .why-grid .why-card:last-child{grid-column:1/-1;text-align:center;
-    background:linear-gradient(135deg,rgba(255,107,53,0.06),rgba(123,44,191,0.04),rgba(255,0,110,0.03));
-    border-color:rgba(255,107,53,0.15);padding:40px 48px}
+    background:linear-gradient(135deg,rgba(191,77,26,0.18),rgba(153,51,0,0.08));
+    border-color:rgba(191,77,26,0.3);padding:40px 48px}
   .why-grid .why-card:last-child .num{margin:0 auto 14px}
   .why-grid .why-card:last-child p{max-width:680px;margin:0 auto}
 }
@@ -155,6 +155,7 @@ footer .version{color:rgba(255,255,255,0.15);margin-top:4px}
   .gap-grid{grid-template-columns:1fr}
   .why-grid{grid-template-columns:1fr}
   .hero h1{font-size:2rem}
+  .hero-term{font-size:11px;padding:8px 12px}
   .cta-btn{padding:14px 32px;font-size:16px}
 }
 </style>
@@ -170,7 +171,7 @@ footer .version{color:rgba(255,255,255,0.15);margin-top:4px}
     <p class="tagline">Built-in memory runs out of tokens. Sessions reset. Context dies. This fixes those gaps — and nothing more.</p>
     <div class="hero-term">
       <span class="prompt">$</span>
-      <span class="cmd"> ask your Hermes to install hermes-obsidian-memory</span>
+      <span class="cmd"><i>"Hermes, install this skill — https://github.com/contextinit/hermes-skills/raw/main/skill/hermes-obsidian-memory-skill-v1.0.zip"</i></span>
       <span class="cursor"></span>
     </div>
     <a href="https://github.com/contextinit/hermes-skills/raw/main/skill/hermes-obsidian-memory-skill-v1.0.zip" class="cta-btn" download>
