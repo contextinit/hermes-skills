@@ -43,7 +43,7 @@ a{color:var(--orange);text-decoration:none}
 .hero .sub{font-size:clamp(1rem,2.2vw,1.2rem);color:var(--muted);max-width:620px;margin:0 auto 12px}
 .hero .tagline{font-size:clamp(.85rem,1.6vw,.95rem);color:rgba(255,255,255,0.25);margin-bottom:32px;font-style:italic}
 .hero-term{display:inline-flex;align-items:center;gap:8px;background:rgba(18,18,42,0.7);border:1px solid rgba(255,107,53,0.15);border-radius:8px;padding:10px 18px;
-  font-family:'SF Mono','Fira Code','Cascadia Code',monospace;font-size:13px;color:var(--muted);margin-bottom:32px;backdrop-filter:blur(10px)}
+  font-family:'SF Mono','Fira Code','Cascadia Code',monospace;font-size:13px;color:var(--muted);margin-bottom:40px;backdrop-filter:blur(10px)}
 .hero-term .prompt{color:var(--orange);font-weight:600}
 .hero-term .cmd{color:var(--text)}
 .hero-term .cursor{display:inline-block;width:7px;height:15px;background:var(--pink);animation:blink 1s step-end infinite;vertical-align:middle;margin-left:2px}
@@ -80,6 +80,14 @@ h2 span{background:var(--grad1);-webkit-background-clip:text;-webkit-text-fill-c
 
 /* ─── Why ─── */
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;margin-top:36px}
+@media(min-width:900px){
+  .why-grid{grid-template-columns:repeat(3,1fr)}
+  .why-grid .why-card:last-child{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;
+    border-color:rgba(255,107,53,0.12);background:linear-gradient(135deg,rgba(255,107,53,0.03),rgba(123,44,191,0.03))}
+  .why-grid .why-card:last-child .num{width:44px;height:44px;font-size:18px;margin-bottom:0}
+  .why-grid .why-card:last-child h3{font-size:18px;margin-bottom:4px}
+  .why-grid .why-card:last-child p{margin-bottom:0}
+}
 .why-card{background:var(--card);border:1px solid rgba(255,255,255,0.04);border-radius:14px;padding:32px;transition:transform .35s,border-color .3s}
 .why-card:hover{transform:translateY(-4px);border-color:rgba(123,44,191,0.2)}
 .why-card .num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;font-size:14px;font-weight:700;
@@ -162,7 +170,7 @@ footer .version{color:rgba(255,255,255,0.15);margin-top:4px}
     <p class="tagline">Built-in memory runs out of tokens. Sessions reset. Context dies. This fixes those gaps — and nothing more.</p>
     <div class="hero-term">
       <span class="prompt">$</span>
-      <span class="cmd"> unzip hermes-obsidian-memory-v1.0.zip</span>
+      <span class="cmd"> ask your Hermes to install hermes-obsidian-memory</span>
       <span class="cursor"></span>
     </div>
     <a href="https://github.com/contextinit/hermes-skills/raw/main/skill/hermes-obsidian-memory-skill-v1.0.zip" class="cta-btn" download>
