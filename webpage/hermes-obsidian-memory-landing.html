@@ -42,7 +42,7 @@ a{color:var(--orange);text-decoration:none}
 .hero h1 span{background:linear-gradient(135deg,var(--orange),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero .sub{font-size:clamp(1rem,2.2vw,1.2rem);color:var(--muted);max-width:620px;margin:0 auto 12px}
 .hero .tagline{font-size:clamp(.85rem,1.6vw,.95rem);color:rgba(255,255,255,0.25);margin-bottom:32px;font-style:italic}
-.hero-term{display:inline-flex;align-items:center;gap:8px;background:rgba(18,18,42,0.7);border:1px solid rgba(255,107,53,0.15);border-radius:8px;padding:10px 18px;
+.hero-term{display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(18,18,42,0.7);border:1px solid rgba(255,107,53,0.15);border-radius:8px;padding:10px 18px;
   font-family:'SF Mono','Fira Code','Cascadia Code',monospace;font-size:13px;color:var(--muted);margin-bottom:40px;backdrop-filter:blur(10px)}
 .hero-term .prompt{color:var(--orange);font-weight:600}
 .hero-term .cmd{color:var(--text)}
@@ -82,11 +82,11 @@ h2 span{background:var(--grad1);-webkit-background-clip:text;-webkit-text-fill-c
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;margin-top:36px}
 @media(min-width:900px){
   .why-grid{grid-template-columns:repeat(3,1fr)}
-  .why-grid .why-card:last-child{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;
-    border-color:rgba(255,107,53,0.12);background:linear-gradient(135deg,rgba(255,107,53,0.03),rgba(123,44,191,0.03))}
-  .why-grid .why-card:last-child .num{width:44px;height:44px;font-size:18px;margin-bottom:0}
-  .why-grid .why-card:last-child h3{font-size:18px;margin-bottom:4px}
-  .why-grid .why-card:last-child p{margin-bottom:0}
+  .why-grid .why-card:last-child{grid-column:1/-1;text-align:center;
+    background:linear-gradient(135deg,rgba(255,107,53,0.06),rgba(123,44,191,0.04),rgba(255,0,110,0.03));
+    border-color:rgba(255,107,53,0.15);padding:40px 48px}
+  .why-grid .why-card:last-child .num{margin:0 auto 14px}
+  .why-grid .why-card:last-child p{max-width:680px;margin:0 auto}
 }
 .why-card{background:var(--card);border:1px solid rgba(255,255,255,0.04);border-radius:14px;padding:32px;transition:transform .35s,border-color .3s}
 .why-card:hover{transform:translateY(-4px);border-color:rgba(123,44,191,0.2)}
